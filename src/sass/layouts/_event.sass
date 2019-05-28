@@ -1,0 +1,35 @@
+.event-content--grid
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr 1fr
+
+.bar-event-content-image,
+.coop-event-content-image,
+.ie-event-content-image
+  height: 100%
+  width: 100%
+  //background: url(asstes/imgs/slider-01.jpg) no-repeat center center
+  //background-size: cover
+
+.bar-event-content-image
+  background-color: $infinity-purple
+
+.coop-event-content-image
+  background-color: $infinity-blue
+
+.ie-event-content-image
+  background-color: $infinity-teal
+
+.event-content-description
+  margin: 4%
+
+  h1
+    text-align: center
+
+  p
+    margin-top: 4vh
+
++respond-to(sm)
+  .event-content--grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr

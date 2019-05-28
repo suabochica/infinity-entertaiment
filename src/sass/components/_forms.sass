@@ -1,0 +1,76 @@
+%form-button
+  background-color: $infinity-pink
+  color: $infinity-white
+  font-family: 'Bebas Neue'
+  font-size: 1.6rem
+  padding: 6px 0
+  text-decoration: none
+
+%form-select
+  color: $infinity-black
+  font-family: 'Titillium'
+  font-size: 1rem
+
+input
+  border: 1px solid $infinity-gray-light
+  font-family: 'FontAwesome', 'Titillium'
+  font-size: 1.2rem
+  height: 32px
+  margin: 2% 8px 2% 0
+  padding: 0 1%
+  width: 96%
+
+  &[type='button'],
+  &[type='reset'],
+  &[type='submit']
+    background: none
+    border: 0
+    box-sizing: content-box
+    color: inherit
+    font: inherit
+    padding: 0
+
+legend
+  @extend %paragraph-02
+
+  color: $infinity-pink
+
+label
+  @extend %paragraph-04
+
+  margin-bottom: 8px
+
+select
+  @extend %form-select
+
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  background-image: url('https://use.fontawesome.com/releases/v5.0.13/svgs/solid/angle-down.svg')
+  background-position-x: 99%
+  background-repeat: no-repeat
+  border: 1px solid $infinity-gray-light
+  border-radius: 0
+  height: 32px
+  margin: 2% 8px 2% 0
+  padding: 0 1%
+  width: 99%
+
+button
+  border: 0
+  height: 32px
+  width: 100%
+
+  &[type='button'],
+  &[type='submit']
+    @extend %form-button
+
+    &:hover
+      background-color: $infinity-purple
+
+.fieldset-section
+  background-color: $infinity-white
+  border: 0
+  margin: 16px 8px
+  padding: 8px 4px
+

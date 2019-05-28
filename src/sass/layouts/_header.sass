@@ -1,0 +1,54 @@
+.header--flex
+  display: flex
+  flex-direction: row
+  height: 64px
+  justify-content: space-between
+
+.header-full-menu--toggle,
+.header-full-menu--toggle--open
+  font-size: 1.6rem
+  padding: 16px
+
+.header-full-menu--toggle--open
+  &::before
+    content: '\f00d' !important
+    font-family: 'FontAwesome'
+
+.header-full-menu--toggle
+  &::before
+    content: '\f0c9'
+    font-family: 'FontAwesome'
+
+
+  &:hover
+    color: $infinity-teal
+
+.header-full-menu-nav
+  background-color: $infinity-pink
+  bottom: 0
+  display: none
+  height: 100%
+  left: 0
+  opacity: 0
+  position: fixed
+  right: 0
+  text-align: center
+  top: 64px
+  transition-duration: 200ms
+  transition-property: opacity
+  transition-timing-function: ease-in
+  width: 100%
+
+  &.header-full-menu-nav--open
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    opacity: 1
+    z-index: 4
+
+    a
+      color: $infinity-white
+
+      &:hover
+        color: mistyrose

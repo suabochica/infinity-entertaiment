@@ -1,0 +1,42 @@
+.footer
+  background: $infinity-black
+
+.footer-menu--grid
+  align-items: center
+  display: grid
+  grid-gap: 8px
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr 1fr
+  justify-items: center
+
+.footer-menu--anchor
+  background-color: transparent
+  color: $infinity-white
+  font-family: 'Bebas Neue'
+  font-size: 1.6rem
+  padding: 0;
+  text-decoration: none
+
+  &:hover
+    color: $infinity-teal
+
+.footer-menu-social-networks--flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+  a
+    font-family: 'FontAwesome'
+    font-size: 1.6rem
+    padding: 8px;
+
+    &:hover
+      color: $infinity-teal
+
++respond-to(sm)
+  .footer-menu--grid
+    align-content: center
+    display: flex
+    flex-direction: row
+    flex-flow: row wrap
+    justify-content: space-around

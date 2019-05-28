@@ -1,0 +1,27 @@
+.quote-content
+    h2 Formulario de Cotización
+    p Actualmente todas las cotizaciones de Infinity Entertaiment se realizan por WhatsApp. Se solicita una cuenta de correo electroníco para que las partes interesadas en proveer y consumir las prestaciones de Infinity Entertaiment tengan un registro digital de la cotización. Por tanto, lo inivitamos a diligenciar el siguiente formulario para dar inicio a la cotización de nuestros servicios:
+
+    form.quote-content-form(onsubmit="onSubmit()")
+        fieldset.fieldset-section
+            legend Nombre Completo
+            label(for="name") Indíquenos su nombre completo
+            input(name="name", type="text", placeholder!="&#xf007;", minlength="3", pattern="[A-Za-z0-9\. -]+", title="Por favor, ingresa un nombre y un apellido", required="")
+        fieldset.fieldset-section
+            legend Correo Eléctronico
+            label(for="email") Facilítenos una cuenta de correo electrónico
+            input(name="email" , type="email", placeholder!="&#xf0e0;", pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$", title="Por favor, utiliza el simbolo @ para agregar una cuenta de correo válida", required="")
+        fieldset.fieldset-section
+            legend Número de teléfono
+            label(for="phone_number") Compartanos su número de teléfono celular
+            input(name="phone_number", type="tel", placeholder!="&#xf095;", minlength="10", title="Por favor, ingresa un número de 10 dígitos", required="")
+        fieldset.fieldset-section
+            legend Evento a cotizar
+            label(for="account_type") Seleccione el tipo de evento a cotizar
+            .select--icon
+                select(id="event_type" name="event_type")
+                    option IE-House
+                    option Corporativo
+                    option Bar
+        fieldset.fieldset-section-button
+            button(type="submit") Iniciar Cotización

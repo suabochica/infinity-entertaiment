@@ -1,0 +1,115 @@
+.content-full-width-slider
+  height: 600px
+  overflow: hidden
+  position: relative
+
+.content-full-width-slider-slides
+  background-color: dodgerblue
+  height: 100%
+  position: relative
+
+.content-full-width-slider-slide
+  background-color: tomato
+  display: table
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  transform: translateX(100%)
+  transition: transform .5s
+  width: 100%
+  z-index: 1
+  //background: url(asstes/imgs/slider-01.jpg) no-repeat center center
+  //background-size: cover
+
+  &:nth-of-type(2)
+    background-color: dodgerblue
+    //background: url(assets/imgs/slider-02.jpg) no-repeat center center
+    //background-size: cover
+
+  &:nth-of-type(3)
+    background-color: aquamarine
+    //background: url(assets/imgs/slider-02.jpg) no-repeat center center
+    //background-size: cover
+
+  &.slide--selected
+    transform: translateX(0)
+    z-index: 2
+
+  &.slide--move-left
+    transform: translateX(-100%)
+
+  &.slide--visible
+    z-index: 2
+
+.content-full-width-slider-slide--wrapper
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  color: $infinity-white
+  display: table-cell
+  text-align: center
+  vertical-align: middle
+
+.content-slider-coverline-headline
+  margin-top: 0
+  padding: 8px 0
+
+.content-slider-coverline-date
+  padding: 8px 0
+
+.content-full-width-slider-arrows-navigation
+  a
+    display: none
+    font-weight: 100
+    left: 20px
+    opacity: .5
+    position: absolute
+    text-decoration: none
+    top: 50%
+    transform: translateY(-50%)
+    transition: opacity .3s, visibility .3s
+    z-index: 3
+
+    &:hover
+      opacity: 1
+
+.content-full-width-slider-arrows-navigation-next
+  left: auto !important
+  right: 10px
+
+.content-full-width-slider-dots-navigation
+  bottom: 20px
+  left: 50%
+  position: absolute
+  transform: translateX(-50%)
+  z-index: 3
+
+  a
+    border: 1px solid $infinity-white
+    border-radius: 50%
+    color: transparent
+    display: block
+    height: 14px
+    overflow: hidden
+    padding: 0
+    text-indent: 100%
+    transition: background-color .3s
+    white-space: nowrap
+    width: 14px
+
+    &:hover,
+    &.slide--selected
+      background-color: $infinity-white
+
+.content-full-width-slider-dot
+  display: inline-block
+  float: left
+  margin-right: 15px
+
+  &:last-of-type
+    margin-right: 0
+
++respond-to(sm)
+  .content-full-width-slider-arrows-navigation
+    a
+      display: block

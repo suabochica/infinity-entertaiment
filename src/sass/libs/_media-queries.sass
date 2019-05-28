@@ -1,0 +1,18 @@
+//Breakpoints
+$small-viewport-min: 768px; //tablet
+$medium-viewport-min: 1025px; //desktop
+$large-viewpoer-min: 1200px; //widescreen
+
+=respond-to($size)
+  @if $size == sm
+    @media screen and (min-width: $small-viewport-min)
+      @content
+  @else if $size == md
+    @media screen and (min-width: $medium-viewport-min)
+      @content
+  @else if $size == lg
+    @media screen and (min-width: $large-viewport-min)
+      @content
+  @else
+    @media screen and (min-width: $size)
+      @content

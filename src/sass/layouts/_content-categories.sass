@@ -1,0 +1,41 @@
+.content-category--grid
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 360px 1fr
+  justify-content: stretch
+
+.content-category--wrapper
+  img
+    height: 100%
+    width: 100%
+
+.content-category-details-coverline--grid
+  align-items: center
+  display: grid
+  grid-template-columns: 2fr 1fr
+  grid-template-rows: 1fr 1fr 1fr
+
+.content-category-details-coverline-headline
+  grid-column: 1 / span 2
+  grid-row: 2
+
+.content-category-details-coverline-category
+  grid-column: 1 / span 2
+  grid-row: 3
+
+.content-category-details-coverline-button
+  align-self: center
+  grid-column: 2
+  grid-row: 3
+  justify-self: end
+
++respond-to(sm)
+  .content-categories--grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+  .content-category--grid
+    padding: 8px;
+
+  .content-category-details-coverline--grid
+    height: 256px
